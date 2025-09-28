@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <div class="container">
+      <p class="d-none">This text hidden</p>
+
+      <div class="d-inline p-1">inline div 1</div>
+      <div class="d-inline p-1">inline div 2</div>
+
+      <br /><br />
+
+      <span class="d-block p-1">block span 1</span>
+      <span class="d-block p-1">block span 2</span>
+    </div>
+
+    <!-- Inline vs Inline-Block -->
+    <span class="d-inline p-1" style="width: 500px">
+      <!-- inline: width işe YARAMAZ, içerik kadar yer kaplar -->
+    </span>
+
+    <span class="d-inline-block p-1" style="width: 500px">
+      <!-- inline-block: width/height çalışır, yine satır içinde durur -->
+    </span>
+
+    <br /><br />
+
+    <!-- Hide on small screens (mobilde gizle) -->
+    <div class="d-none d-sm-block p-2">
+      This div is hidden on mobile (shown ≥576px)
+    </div>
+    <br /><br /><br />
+
+    <!-- Position Static -->
+    <p class="position-static">This text is static</p>
+
+    <br /><br />
+
+    <div
+      class="position-relative"
+      style="height: 200px; width: 200px; background: #ccc"
+    >
+      <p class="position-absolute start-0 bottom-0" style="top: 6px">Hello</p>
+    </div>
+
+    <br /><br />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
