@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mb-5">Bootstrap Grid Columns</h1>
+
+      <div class="row">
+        <!--Bootstrap’te bir satır (row) başlatıyor.-->
+        <div class="col bg-light border">1 of 2</div>
+        <div class="col bg-light border">2 of 2</div>
+      </div>
+
+      <div class="row">
+        <div class="col bg-light border">1 of 3</div>
+        <div class="col bg-light border">2 of 3</div>
+        <div class="col bg-light border">3 of 3</div>
+      </div>
+
+      <br /><br /><br />
+
+      <div class="row">
+        <!--col-6, 12 sütunluk grid sisteminde 6 sütunluk yer kapla demek ki tane col-6 koyduğun için toplamda 6+6=12 oluyor.-->
+        <div class="col-6 bg-light border">1 of 2</div>
+        <div class="col-6 bg-light border">1 of 2</div>
+      </div>
+
+      <!-- Responsive Grid -->
+      <div class="row">
+        <!--md → medium ekran boyutlarından itibaren (≥768px) bu div 6 sütun genişliğinde (%50) olur.-->
+        <div class="col-md-6 bg-light border">1 of 2</div>
+        <div class="col-md-6 bg-light border">2 of 2</div>
+      </div>
+      <!--sm → small ekran boyutlarından itibaren (≥576px) bu div 6 sütun genişliğinde olur.-->
+      <div class="row">
+        <div class="col-sm-6 bg-light border">1 of 4</div>
+        <div class="col-sm-6 bg-light border">2 of 4</div>
+        <div class="col-sm-6 bg-light border">3 of 4</div>
+        <div class="col-sm-6 bg-light border">4 of 4</div>
+      </div>
+
+      <br /><br /><br />
+      <!-- Row Cols -->
+      <div class="row row-cols-3">
+        <!--row-cols-3 Bu satırda her zaman 3 sütun olsun-->
+        <div class="col bg-light border">Column</div>
+        <div class="col bg-light border">Column</div>
+        <div class="col bg-light border">Column</div>
+        <div class="col bg-light border">Column</div>
+        <div class="col bg-light border">Column</div>
+        <div class="col bg-light border">Column</div>
+      </div>
+
+      <br /><br />
+
+      <!-- Gutters -->
+      <div class="row g-5">
+        <!--Gap g-5 -->
+        <div class="col-md-4">
+          <!--text-bg-primary arka planı mavi yapar metin rengin beyaz-->
+          <div class="p-3 text-bg-primary">Content Item</div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 text-bg-primary">Content Item</div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 text-bg-primary">Content Item</div>
+        </div>
+      </div>
+
+      <br /><br /><br />
+
+      <!-- Offsetting Columns -->
+      <div class="row">
+        <div class="col-md-4 offset-4">
+          <!--Offset dedigimiz bir nevi itelemeye yarıyor-->
+          <div class="p-3 text-bg-primary">Content Item</div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 text-bg-primary">Content Item</div>
+        </div>
+      </div>
+
+      <br /><br /><br />
+
+      <!-- Ordering -->
+      <div class="row">
+        <!--order-x Sütunların görünme sırasını değiştiriyor-->
+        <div class="col bg-light border order-2">Column 1</div>
+        <div class="col bg-light border order-4">Column 2</div>
+        <div class="col bg-light border order-1">Column 3</div>
+        <div class="col bg-light border order-3">Column 4</div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
