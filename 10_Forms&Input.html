@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mb-5">Forms & Input</h1>
+      <!-- Basic Form -->
+      <form>
+        <div class="mb-3">
+          <!--
+          form-label → Bootstrap’in label için varsayılan stilini uygular.
+          form-control → Bootstrap’in input alanlarına verdiği hazır stil-->
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" id="email" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-control" />
+        </div>
+
+        <!--form-check checkbox/radio kutularını göstermek icin,form-check-input Bootstrap’in checkbox stili-->
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="remember" />
+          <label for="remember" class="form-check-label">Remember Me</label>
+        </div>
+        <br />
+        <input type="submit" value="Login" class="btn btn-primary" />
+      </form>
+
+      <br /><br /><br />
+
+      <hr />
+      <br />
+      <!-- Other Fields -->
+      <form>
+        <!-- Select Fields -->
+        <div class="mb-3">
+          <select class="form-select">
+            <option>Best time to call</option>
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+          </select>
+        </div>
+
+        <!-- Textarea -->
+        <div class="mb-3">
+          <textarea class="form-control" placeholder="Message"></textarea>
+        </div>
+
+        <!-- Switch 
+         form-check form-switch → Bootstrap checkbox’ı switch (aç/kapa düğmesi) gibi gösterir.-->
+        <div class="form-check form-switch">
+          <input type="checkbox" class="form-check-input" id="switch1" />
+          <label class="form-check-label" for="switch1">Enable Feature</label>
+        </div>
+
+        <br /><br /><br />
+        <!-- Inline Checkboxes
+         form-check form-check-inline → checkbox’ları yan yana gösterir -->
+        <div class="mb-3">
+          <div class="form-check form-check-inline">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="ch1"
+              value="option1"
+            />
+            <label for="ch1" class="form-check-label">1</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="ch2"
+              value="option2"
+            />
+            <label for="ch2" class="form-check-label">2</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="ch3"
+              value="option3"
+            />
+            <label for="ch3" class="form-check-label">3</label>
+          </div>
+        </div>
+
+        <!-- Toggle Button -->
+        <div class="mb-3">
+          <input type="checkbox" class="btn-check" id="btn-check" />
+          <label class="btn btn-danger" for="btn-check">Button Toggle</label>
+        </div>
+
+        <!-- Range -->
+        <div class="mb-3">
+          <label for="range" class="form-label">Volume</label>
+          <input type="range" class="form-range" id="range" />
+        </div>
+
+        <!-- Range Steps
+         min="0" en küçük değer. max="5" en büyük değer. step="0.5" kaydırma adımı. -->
+        <form>
+          <div class="mb-3">
+            <label for="range" class="form-label">Rating (0 - 5)</label>
+            <input
+              type="range"
+              class="form-range"
+              id="range"
+              min="0"
+              max="5"
+              step="0.5"
+            />
+          </div>
+        </form>
+      </form>
+      <br /><br /><br />
+      <hr />
+      <!-- Input Groups -->
+      <form>
+        <div class="input-group mb-3">
+          <span class="input-group-text">@</span>
+          <input type="email" class="form-control" placeholder="Email" />
+        </div>
+      </form>
+
+      <form>
+        <div class="input-group">
+          <!--input ve ek içerikleri yan yana hizalar.-->
+          <input type="text" class="form-control" placeholder="Enter text" />
+          <button class="btn btn-outline-secondary" type="button">
+            Submit
+          </button>
+        </div>
+      </form>
+      <br /><br />
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
