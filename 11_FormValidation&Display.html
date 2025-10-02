@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mb-5">Form Validation Display</h1>
+
+      <!--novalidate form attribute'dur.,mesela required olan boş bir yer varsa uyarı verir.-->
+      <!--<form novalidate> dersen: kendi validation’ını kapatır.Sen JavaScript ile custom validation yazarsın.-->
+      <!--was-validated valid ve invalid feedbackleri gösterir.-->
+      <form class="was-validated" novalidate>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" required />
+          <div class="valid-feedback">Looks Good</div>
+          <!--(validation başarılı) bu mesaj gösterilir.-->
+          <div class="invalid-feedback">Please pick a username</div>
+          <!--(validation başarısız olunca ) bu mesaj gösterilir.-->
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" required />
+          <div class="valid-feedback">Looks Good</div>
+          <div class="invalid-feedback">Please pick a email</div>
+        </div>
+        <div class="mb-3">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city" required />
+          <div class="valid-feedback">Looks Good</div>
+          <div class="invalid-feedback">Please pick a City</div>
+        </div>
+
+        <div class="mb-3">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="invalidCheck"
+              required
+            />
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+
+            <div class="invalid-feedback">You must agree to the terms</div>
+          </div>
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Submit" />
+      </form>
+    </div>
+    <br /><br /><br />
+    <hr />
+
+    <div class="container">
+      <h1 class="mb-5">Form Validation Display</h1>
+
+      <!--novalidate form attribute'dur.,mesela required olan boş bir yer varsa uyarı verir.-->
+      <!--<form novalidate> dersen: kendi validation’ını kapatır.Sen JavaScript ile custom validation yazarsın.-->
+      <!--was-validated valid ve invalid feedbackleri gösterir.-->
+      <form class="needs-validation" novalidate>
+        <!--class="needs-validation" custom form validation yapar.-->
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" required />
+          <div class="valid-feedback">Looks Good</div>
+          <!--(validation başarılı) bu mesaj gösterilir.-->
+          <div class="invalid-feedback">Please pick a username</div>
+          <!--(validation başarısız olunca ) bu mesaj gösterilir.-->
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" required />
+          <div class="valid-feedback">Looks Good</div>
+          <div class="invalid-feedback">Please pick a email</div>
+        </div>
+        <div class="mb-3">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city" required />
+          <div class="valid-feedback">Looks Good</div>
+          <div class="invalid-feedback">Please pick a City</div>
+        </div>
+
+        <div class="mb-3">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="invalidCheck"
+              required
+            />
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+
+            <div class="invalid-feedback">You must agree to the terms</div>
+          </div>
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Submit" />
+      </form>
+    </div>
+
+    <br /><br /><br />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const form = document.querySelector(".needs-validation");
+
+      form.addEventListener("submit", (e) => {
+        // 3) Eğer form geçerli değilse (hatalıysa)||  form.checkValidity() input’lar kurallara uyar mı ona bakar
+        if (!form.checkValidity()) {
+          // Tarayıcının formu göndermesini engelle
+          e.preventDefault();
+          alert("Something went wrong");
+        } else {
+          // Eğer form doğru doldurulduysa ekrana success uyarısı çıkar
+          alert("success");
+        }
+
+        // Bu class eklenince valid/invalid-feedback mesajları görünür
+        form.classList.add("was-validated");
+      });
+    </script>
+  </body>
+</html>
