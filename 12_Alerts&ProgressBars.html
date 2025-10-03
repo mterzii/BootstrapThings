@@ -60,6 +60,74 @@
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
       <br /><br /><br />
+
+      <!-- Dismissing -->
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <!--alert-dismissible → Bu alert’in kapatılabilir olduğunu belirtir.-->
+        <!-- fade show → Kapatıldığında animasyonlu kaybolma efekti verir -->
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+        <!--data-bs-dismiss="alert" → Bu butona tıklandığında sadece bu classı alert div’i kapanır.-->
+        Something went wrong
+      </div>
+
+      <br /><br /><br />
+
+      <!-- Progress Bar -->
+      <div
+        class="progress mb-4"
+        role="progressbar"
+        aria-valuenow="25"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" style="width: 25%"></div>
+        <!--valuenow  Şu anki değer||valuemin Minimum değer || valuemax Maksimum değer || width: 25% → Çubuğun görsel boyutunu ayarlar.-->
+      </div>
+
+      <br /><br /><br />
+
+      <div
+        class="progress mb-4"
+        role="progressbar"
+        aria-valuenow="25"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar bg-success" style="width: 55%">55%</div>
+        <!--valuenow  Şu anki değer||valuemin Minimum değer || valuemax Maksimum değer || width: 25% → Çubuğun görsel boyutunu ayarlar.-->
+      </div>
+
+      <br /><br /><br />
+
+      <div
+        class="progress mb-4"
+        role="progressbar"
+        aria-valuenow="25"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar-striped bg-success" style="width: 45%"></div>
+        <!--valuenow  Şu anki değer||valuemin Minimum değer || valuemax Maksimum değer || width: 25% → Çubuğun görsel boyutunu ayarlar.-->
+      </div>
+
+      <br /><br /><br />
+
+      <!--Animasyon için animated ekle-->
+      <div
+        class="progress mb-4"
+        role="progressbar"
+        aria-valuenow="25"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div
+          class="progress-bar-striped progress-bar-animated bg-success"
+          style="width: 45%"
+        ></div>
+        <!--valuenow  Şu anki değer||valuemin Minimum değer || valuemax Maksimum değer || width: 25% → Çubuğun görsel boyutunu ayarlar.-->
+      </div>
+
+      <br /><br /><br />
     </div>
 
     <script
