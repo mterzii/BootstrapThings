@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Breadcrumbs, web sayfalarında kullanılan bir navigasyon (yol gösterici) öğesi.Home > Electronics > Phones > iPhone 15  gibi -->
+
+    <div class="container">
+      <h1 class="mb-5">Breadcrumb & Pagination</h1>
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <!--<nav aria-label="breadcrumb">'ın görsel veya stil anlamında hiçbir etkisi yok.
+            Bu tamamen erişilebilirlik (accessibility) için:-->
+        <ol class="breadcrumb">
+          <!-- class="breadcrumb" Yatay yapar sıralamayı bunun gibi Home/About/Staff-->
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">About</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Staff</li>
+          <!--active olunca o link gri renkte, pasif görünüyor oldugun sayfayı gösterir-->
+        </ol>
+      </nav>
+
+      <br /><br /><br />
+      <!-- Dividers -->
+      <!----bs-breadcrumb-divider Bootstrap’in özel CSS ayırıcı sembolü değiştiriyorsun / yerine > koyar-->
+      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">About</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Staff</li>
+        </ol>
+      </nav>
+
+      <br /><br /><br />
+      <!-- Pagination -->
+      <nav aria-label="page navigation">
+        <ul class="pagination">
+          <!-- yatay kutucuk şekilde hizalama yapar sıralama gibi-->
+          <!--page-item (Previous / Next / numaralar)-->
+          <li class="page-item">
+            <a href="#" class="page-link">Previous</a>
+          </li>
+          <li class="page-item">
+            <a href="#" class="page-link">1</a>
+          </li>
+          <li class="page-item">
+            <a href="#" class="page-link">2</a>
+          </li>
+          <li class="page-item">
+            <a href="#" class="page-link">3</a>
+          </li>
+          <li class="page-item">
+            <a href="#" class="page-link" aria-label="Next"> &raquo; </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
