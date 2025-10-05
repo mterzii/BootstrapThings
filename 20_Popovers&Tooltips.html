@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mb-5">Popovers & Tooltips</h1>
+      <!--Popover-->
+
+      <!-- data-bs-toggle="popover"Bootstrap’a “Bu buton bir popover açacak” der.-->
+      <!--data-bs-title="Popover Title" Açılan kutucuğun başlığını belirler-->
+      <!-- data-bs-content="This is the popover content" Açılan kutunun içeriği yani mesajıdır -->
+      <button
+        class="btn btn-danger btn-lg"
+        id="popover"
+        data-bs-toggle="popover"
+        data-bs-title="Popover Title"
+        data-bs-content="This is the popover content"
+      >
+        Toggle Popover
+      </button>
+
+      <br /><br />
+
+      <br /><br /><br />
+      <!-- Tooltip -->
+      <!-- data-bs-toggle="tooltip" → Bootstrap’a diyor ki:Bu elemana tooltip özelliği ekle -->
+      <!--data-bs-title="Tooltip One" Tooltip’in içinde gözükecek metin.Fare üstüne geldiginde bu yazı gözükecek-->
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam culpa
+        <a href="#" data-bs-toggle="tooltip" data-bs-title="Tooltip One"
+          >tooltip one</a
+        >
+        reiciendis pariatur modi, veritatis eius consequatur repellat soluta
+        quas consequuntur dolore tempora id!
+        <a href="#" data-bs-toggle="tooltip" data-bs-title="Tooltip Two"
+          >tooltip one</a
+        >
+        Perspiciatis obcaecati, laudantium a consequuntur sunt placeat!
+      </p>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const popoverEl = document.getElementById('popover');
+      const popover = new bootstrap.Popover(popoverEl);
+      //   bootstrap.Popover(...) demek = “Bu elemana popover özelliği ekle. nesne üstünden emir vereceğin için popever 'a atadık.”
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (el) => new bootstrap.Tooltip(el)
+      );
+    </script>
+  </body>
+</html>
